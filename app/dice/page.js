@@ -54,12 +54,14 @@ export default function DicePage() {
     <div className="flex flex-col items-center justify-start min-h-screen bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
       <div className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg rounded-2xl p-6 w-full max-w-lg text-center">
         <Link
-          className="flex text-sm text-white rounded-md items-start w-fit bg-slate-900 py-1 px-2 mb-3 ml-2"
+          className=" text-sm text-white rounded-md  w-fit bg-slate-900 py-1 px-2 mb-3 ml-2"
           href="/"
         >
           Back ⬅️
         </Link>
-        <h1 className="text-2xl font-bold mb-4 text-white">Fibonacci Dice</h1>
+        <h1 className="text-2xl font-bold mt-4 mb-4 text-white">
+          Fibonacci Dice
+        </h1>
 
         {/* Mode Toggle */}
         <div className="mb-4">
