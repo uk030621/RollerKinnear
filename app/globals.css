@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom diagonal rocking animations */
+@keyframes rock-diagonal-1 {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg) translate(-5px, -5px);
+  }
+  50% {
+    transform: rotate(15deg) translate(5px, 5px);
+  }
+  75% {
+    transform: rotate(-10deg) translate(-3px, -3px);
+  }
+}
+
+@keyframes rock-diagonal-2 {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg) translate(5px, -5px);
+  }
+  50% {
+    transform: rotate(-15deg) translate(-5px, 5px);
+  }
+  75% {
+    transform: rotate(10deg) translate(3px, -3px);
+  }
+}
+
+@keyframes rock-diagonal-3 {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg) translate(-7px, 7px);
+  }
+  50% {
+    transform: rotate(10deg) translate(7px, -7px);
+  }
+  75% {
+    transform: rotate(-5deg) translate(-4px, 4px);
+  }
+}
+
+/* Add animation classes */
+.animate-rock-1 {
+  animation: rock-diagonal-1 0.5s ease-in-out;
+}
+
+.animate-rock-2 {
+  animation: rock-diagonal-2 0.5s ease-in-out;
+}
+
+.animate-rock-3 {
+  animation: rock-diagonal-3 0.5s ease-in-out;
+}
