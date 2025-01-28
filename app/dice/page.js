@@ -51,21 +51,19 @@ export default function DicePage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100">
-      <div className="bg-white mt-6 shadow-lg rounded-2xl p-6 w-full max-w-lg text-center">
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
+      <div className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg rounded-2xl p-6 w-full max-w-lg text-center">
         <Link
           className="flex text-sm text-white rounded-md items-start w-fit bg-slate-900 py-1 px-2 mb-3 ml-2"
           href="/"
         >
           Back ⬅️
         </Link>
-        <h1 className="text-2xl font-bold mb-4 text-gray-800">
-          Fibonacci Dice
-        </h1>
+        <h1 className="text-2xl font-bold mb-4 text-white">Fibonacci Dice</h1>
 
         {/* Mode Toggle */}
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2">
+          <label className="block text-white mb-2">
             Select Fibonacci Mode:
           </label>
           <div className="flex items-center justify-center space-x-4">
@@ -96,14 +94,14 @@ export default function DicePage() {
         <div className="mb-4">
           {useLimit ? (
             <div>
-              <label className="block text-gray-700">
+              <label className="block text-white">
                 Fibonacci Limit (Position):
               </label>
               <input
                 type="number"
                 value={limit}
                 onChange={(e) => setLimit(Number(e.target.value))}
-                className="border rounded-lg px-3 py-1 w-full mt-2"
+                className="border text-black rounded-lg px-3 py-1 w-full mt-2"
               />
             </div>
           ) : (
@@ -115,7 +113,7 @@ export default function DicePage() {
                 type="number"
                 value={maxNumber}
                 onChange={(e) => setMaxNumber(Number(e.target.value))}
-                className="border rounded-lg px-3 py-1 w-full mt-2"
+                className="border text-black rounded-lg px-3 py-1 w-full mt-2"
               />
             </div>
           )}
@@ -152,7 +150,7 @@ export default function DicePage() {
         <div className="mt-6">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="text-sm text-gray-600 hover:underline"
+            className="text-sm text-white hover:underline"
           >
             {isDropdownOpen ? "Hide Explanation" : "How does this work?"}
           </button>
@@ -185,8 +183,8 @@ export default function DicePage() {
         {/* Roll History */}
         {history.length > 0 && (
           <div className="mt-6 text-left">
-            <h3 className="font-bold text-gray-800">Roll History:</h3>
-            <ul className="text-gray-700 text-sm">
+            <h3 className="font-bold text-white">Roll History:</h3>
+            <ul className="text-white text-sm">
               {history.map((r, index) => (
                 <li key={index}>
                   Roll {history.length - index}: {r.roll} (at{" "}
